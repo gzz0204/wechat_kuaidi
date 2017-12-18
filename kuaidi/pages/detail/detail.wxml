@@ -1,0 +1,27 @@
+<!--detail.wxml-->
+<view class="container">
+	<!--快递信息模板 begin-->
+	<template name="items">
+		<view class="row">
+		    <view class="time">
+				{{time}}
+		    </view>
+		    <view class="icon"></view>
+		    <view class="infos">
+				{{context}}
+		    </view>
+		</view>
+	</template>
+	<!--快递信息模板 end-->
+<!-- 	<scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}"> -->
+		<view wx:if="{{haslist}}">
+			<!--循环输出列表 begin-->
+			<view class="mainline"></view>
+			<block wx:for="{{list}}" wx:key="*this" class="scroll-view-item bc_green">
+			  <template is="items" data="{{...item}}" />
+			</block>
+			<!--循环输出列表 end-->
+		</view>
+		<view wx:else style="padding: 20px;">{{errmsg}}</view>
+	<!-- </scroll-view> -->
+</view>

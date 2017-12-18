@@ -1,0 +1,15 @@
+/**index.wxss**/
+page{
+	background:#fbf9fe;
+	padding-top: 50px;
+}
+.company{
+	width:100%;
+}
+.title{
+	padding: 0px 20px;
+	margin: 10px 0px;
+	font-size:20px;
+}
+
+

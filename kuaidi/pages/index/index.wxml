@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container" style="width:90%;margin:0 auto;">
+  <view class="company">
+    <view class="title">快递公司：</view>
+    <!-- <picker bindchange="bindPickerChange" value="{{array[index]['id']}}" range="{{array}}" range-key="name"> -->
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+      <view class="picker" style="line-height: 50px;height: 50px;background: #fff;padding-left: 20px;font-size:18px;">
+       当前选择：{{array[index]['name']}}
+      </view>
+    </picker>
+  </view>
+  <view class="caseid">
+    <view class="title">快递单号：</view>
+    <input type="number" placeholder="请输入快递单号" bindinput="bindKeyInput" style="line-height: 50px;height: 50px;background: #fff;padding-left: 20px;font-size:18px;"/>
+  </view>
+  <button type="primary" size="{{primarySize}}"
+           bindtap="bindquery" style="margin-top:20px;"> 查询 </button>
+</view>
